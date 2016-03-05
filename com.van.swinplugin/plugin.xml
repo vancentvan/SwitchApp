@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.van.swinplugin"
+    version="0.2.11">
+    <name>SwinPlugin</name>
+    <description>The switch apps Plugin ever implemented</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,switch</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <js-module src="www/SwinPlugin.js" name="SwinPlugin">
+        <clobbers target="SwinPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SwinPlugin" >
+                <param name="android-package" value="SwinPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/SwinPlugin.java" target-dir="src/" />
+    </platform>
+    
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SwinPlugin" >
+                <param name="ios-package" value="SwinPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/SwinPlugin.h" />
+        <source-file src="src/ios/SwinPlugin.m" />
+    </platform>
+
+</plugin>
