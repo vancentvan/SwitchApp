@@ -22,7 +22,7 @@ public class SwinPlugin extends CordovaPlugin {
 	private PackageManager packageManager;
 
 	public static final String TAG = "Swin Plugin";
-	public static final String packageName = "com.iflytek.xiri.mobile";
+	public static final String packageName = <应用包名>;
 	public static final String downloadSite = <下载链接地址>;
  
 	/**
