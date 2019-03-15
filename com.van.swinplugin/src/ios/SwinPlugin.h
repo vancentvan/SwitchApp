@@ -1,4 +1,4 @@
-/********* Echo.h Cordova Plugin Header *******/
+/********* SwinPlugin.h Cordova Plugin Header *******/
 
 #import <Cordova/CDV.h>
 
