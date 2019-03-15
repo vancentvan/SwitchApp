@@ -37,7 +37,6 @@ public class SwinPlugin extends CordovaPlugin {
 	* @param cordova The context of the main Activity.
 	* @param webView The CordovaWebView Cordova is running in.
 	*/
- 
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
 		packageManager = cordova.getActivity().getPackageManager();
@@ -57,13 +56,19 @@ public class SwinPlugin extends CordovaPlugin {
 					//Toast toast = Toast.makeText(context, "应用未安装，请先进入安装下载...", Toast.LENGTH_LONG);
 					//toast.setGravity(Gravity.CENTER, 0, 0);
 					//toast.show();
-					dialog();
+					showDialog();
 				}
 			}
 		});
 		return true;
 	}
 	
+	/**
+	* Whether app is installed on platform.
+	*
+	* @param context
+	* @param packageName The package name for app.
+	*/
 	boolean isInstallApp(Context context,String packageName)
 	{
 		try {
@@ -75,7 +80,7 @@ public class SwinPlugin extends CordovaPlugin {
 		}
 	}
 	
-	protected void dialog() {
+	protected void showDialog() {
 		AlertDialog.Builder builder = new Builder(cordova.getActivity());
 		builder.setMessage("确认安装吗？");
 		builder.setTitle("检测到您未安装xxx");
