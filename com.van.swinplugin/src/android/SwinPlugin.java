@@ -65,15 +65,15 @@ public class SwinPlugin extends CordovaPlugin {
 	}
 	
 	boolean isInstallApp(Context context,String packageName)
-    {
-        try {
-            packageManager.getApplicationInfo(packageName,PackageManager.GET_UNINSTALLED_PACKAGES);  
-            return true;
-        } catch (NameNotFoundException e) {
-            // TODO: handle exception
-            return false;
-        }
-    }
+	{
+		try {
+			packageManager.getApplicationInfo(packageName,PackageManager.GET_UNINSTALLED_PACKAGES);  
+			return true;
+		} catch (NameNotFoundException e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
 	
 	protected void dialog() {
 		AlertDialog.Builder builder = new Builder(cordova.getActivity());
